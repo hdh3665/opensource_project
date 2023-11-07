@@ -1,11 +1,11 @@
-# opensource_project
+# Opensource Project
 오픈소스 프로젝트 9조
 
 ## 1. Title
-**WEBSITE PASSWORD MANAGER**
+~~**WEBSITE PASSWORD MANAGER** (tentative)~~
 
 ## 2. Abstract
-
+ ~~Make Program to Store Each Website's User Information(ID, PW) and encrypt datas with Caesar & Transposition cipher.(tentative)~~
 
 ## 3. Project schedule
 
