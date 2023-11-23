@@ -3,7 +3,7 @@
 ===================  __week 10__  ===================
 
 - Setting Project Title and Propersal
-  >> complete
+>> complete
 - Setting Project's detail figures  ->  complete
 - Setting Roles  ->  complete
 
