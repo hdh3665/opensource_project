@@ -1,6 +1,6 @@
 # Project Progress
 ---
-================== __week 10__ ================== 
+=================== __week 10__ ===================
 
 - Setting Project Title and Propersal  ->  complete
 - Setting Project's detail figures  ->  complete
