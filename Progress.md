@@ -13,6 +13,7 @@
 
 - CSS/JS/HTML Study  ->  complete
 - encrypt datas with Caesar & Transposition cipher  ->  doing
+- 2023.11.22 Project meeting
 
 ============================================= 
 
