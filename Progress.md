@@ -1,4 +1,4 @@
-================== week 10 ================== 
+*** ================== week 10 ================== 
 
 Setting Project Title and Propersal  ->  complete
 Setting Project's detail figures  ->  complete
