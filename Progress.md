@@ -1,9 +1,9 @@
 ## Project Progress
 ================== week 10 ================== 
 
-Setting Project Title and Propersal  ->  complete
-Setting Project's detail figures  ->  complete
-Setting Roles  ->  complete
+1. Setting Project Title and Propersal  ->  complete
+2. Setting Project's detail figures  ->  complete
+3. Setting Roles  ->  complete
 
 ============================================= 
 
