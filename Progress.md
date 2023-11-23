@@ -1,4 +1,4 @@
-#### Project Progress
+## Project Progress
 ================== week 10 ================== 
 
 Setting Project Title and Propersal  ->  complete
