@@ -1,6 +1,9 @@
 
-# Project Progress
+# Progress Report for Team #0
 ---
+# Progress Summary
+---
+
 ===================  __week 10__  ===================
 
 - Setting Project Title and Propersal -> complete
