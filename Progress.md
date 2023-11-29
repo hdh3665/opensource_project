@@ -18,6 +18,7 @@
 - 프로젝트 내부 동작 구현
 - UI 디자인(로고 제작 등)
 
+![image](https://github.com/hdh3665/opensource_project/assets/144404489/9caf5197-9842-4e1e-8bc8-c0760bf20bcc)
 
 
 ===================  __week 10__  ===================
