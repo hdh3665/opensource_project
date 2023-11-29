@@ -18,6 +18,8 @@
 - 프로젝트 내부 동작 구현
 - UI 디자인(로고 제작 등)
 
+
+
 ===================  __week 10__  ===================
 
 - Setting Project Title and Propersal -> complete
