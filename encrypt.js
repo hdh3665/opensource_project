@@ -1,3 +1,4 @@
+const fs = require('fs');
 class User_Info {
     constructor(domain, ID, PW) {
         this.domain = domain;
@@ -210,6 +211,14 @@ function decryption4(msg){
 
 }
 
+function saveToFile(filename, data) {
+    fs.writeFileSync(filename, data, 'utf-8');
+    console.log(`Data saved to ${filename}`);
+}
+
+
+
+
 let message = "iifal845fsdaasf";
 let cl_message = capital_lower(message);
 let en2_message = encryption2(message);
@@ -222,3 +231,6 @@ console.log(de2_message);
 console.log(en4_message);
 console.log(de4_message);
 console.log(message);
+
+const filename = 'encrypted_password.txt';
+saveToFile(filename, en4_message);
