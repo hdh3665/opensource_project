@@ -208,6 +208,24 @@
 <div id="deleteModal" class="modal">
   <div class="modal-content">
     <p>Content for Delete ID</p>
+
+    <div class="input-container">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+      </div>
+  
+      <div class="input-container">
+        <label for="domain">Domain:</label>
+        <input type="text" id="domain" name="domain">
+      </div>
+      
+      <div class="input-container">
+          <label for="Key">Key:</label>
+          <input type="text" id="Key" name="Key">
+      </div>
+    
+      <button onclick="deleteCredentials()">delete</button>
+
     <button onclick="closeModal('deleteModal')">Close</button>
   </div>
 </div>
