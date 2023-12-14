@@ -126,6 +126,7 @@
 
 <div class="banner">
   <div class="banner-content">
+    <!-- <button class="banner-button" onclick="refreshPage()">Refresh</button> -->
     <h1>Password Manager</h1>
   </div>
 </div>
@@ -146,7 +147,7 @@
 
     <label for="Key">Key:</label>
     <input type="Key" id="Key" name="Key">
-
+    
     <button onclick="saveCredentials()">Save</button>
     <button onclick="closeModal('saveModal')">Close</button>
   </div>
@@ -170,7 +171,7 @@
       <label for="domain">Domain:</label>
       <input type="text" id="domain" name="domain">
     </div>
-
+    
     <div class="input-container">
         <label for="Key">Key:</label>
         <input type="text" id="Key" name="Key">
@@ -185,9 +186,24 @@
 
 <!-- Modal for search ID -->
 <div id="searchModal" class="modal">
-    <button onclick="closeModal('deleteModal')">Close</button>
+  <div class="modal-content">
+    <p>Content for Search ID</p>
+
+    <div class="input-container">
+        <label for="domain">Domain:</label>
+        <input type="text" id="domain" name="domain">
+    </div>
+
+    <div class="input-container">
+        <label for="Key">Key:</label>
+        <input type="text" id="Key" name="Key">
+    </div>
+
+    <button onclick="findCredentials()">find</button>
+
+    <button onclick="closeModal('searchModal')">Close</button>
   </div>
-</div> 
+</div>
 
 <!-- Modal for delete ID -->
 <div id="deleteModal" class="modal">
@@ -214,22 +230,9 @@
     <button onclick="closeModal('deleteModal')">Close</button>
   </div>
 </div>
-  
+
 <div class="popup">
   <button onclick="openModal('saveModal')">save ID</button>
   <button onclick="openModal('searchModal')">search ID</button>
   <button onclick="openModal('deleteModal')">Delete ID</button>
-</div> 
-
-<script>
-  function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'flex';
-  }
-
-  function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
-  }
-</script>
-
-</body>
-</html>
+</div>
