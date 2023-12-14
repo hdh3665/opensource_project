@@ -193,7 +193,7 @@
       
     <div class="input-container">
         <label for="delKey">Key:</label>
-        <input type="text" id="delKey" name="delKey">
+        <input type="password" id="delKey" name="delKey">
     </div>
     
     <button onclick="deleteCredentials()">delete</button>
@@ -237,7 +237,7 @@ var credentialsArray = [];
     
     closeModal('saveModal');
   }
-  function deleteCredentials() {
+    function deleteCredentials() {
     // Get the values from input fields
     var deleteId = document.getElementById('delid').value;
     var deleteDomain = document.getElementById('deldomain').value;
@@ -254,7 +254,7 @@ var credentialsArray = [];
     if (indexToDelete !== -1) {
       // Remove the matching credentials from the array
       credentialsArray.splice(indexToDelete, 1);
-      alert("id : <"+decryption4(en4delid) + ">successfully deleted in domain <"+decryption4(en4deldomain)+">!!!");
+      alert("id : <"+deleteId + ">successfully deleted in domain <"+deleteDomain+">!!!");
     } else {
       alert('No matching data found for deletion.');
     }
@@ -262,7 +262,8 @@ var credentialsArray = [];
     // Close the modal after deletion
     closeModal('deleteModal');
   }
-  function findCredentials() {
+  
+    function findCredentials() {
     // Get the domain and key from the input fields
     var searchDomain = document.getElementById('finddomain').value;
     var searchKey = document.getElementById('findKey').value;
@@ -293,8 +294,7 @@ var credentialsArray = [];
       alert('No matching data found.');
     }
   }
-  
-  
+    
     function change_num(char){
     let changed_num  = '';
     switch (char) {
@@ -495,7 +495,6 @@ var credentialsArray = [];
   function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
   }
-
 </script>
 
 </body>
