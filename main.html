@@ -18,104 +18,200 @@
     }
 
     .banner {
-  background-color: #4CAF50;
-  background-image: url('/opensource_project/resource/picture.jpg');
-  background-size: cover; /* Add this line to make the background image cover the entire div */
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-bottom: 20px;
-  overflow: hidden; /* Add this line to hide any content that might overflow */
-}
+      background-color: #4CAF50;
+      background-size: cover;
+      padding: 20px;
+      border-radius: 10px;
+      width: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
 
-.banner-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.banner h1 {
-  margin: 0;
-  color: #fff;
-  text-align: center;
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .banner h1 {
+      margin: 0;
+      color: #000; /* Change the text color to black (#000) */
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.banner-button {
-  position: relative;
-  z-index: 1;
-  margin-left: 10px;
-  padding: 10px;
-  font-size: 16px;
-  text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .banner-button {
+      position: relative;
+      z-index: 1;
+      margin-left: 10px;
+      padding: 10px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-img {
-  width: 100%;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
+    img {
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
 
-.popup {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 0 0 10px 10px;
-  background-color: #fff;
-  width: 50%;
-  box-sizing: border-box;
-}
+    .popup {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 0 0 10px 10px;
+      background-color: #fff;
+      width: 50%;
+      box-sizing: border-box;
+    }
 
-.popup button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: calc(100% - 20px);
-  max-width: 200px;
-  font-size: 16px;
-  text-decoration: none;
-}
+    .popup button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: calc(100% - 20px);
+      max-width: 200px;
+      font-size: 16px;
+      text-decoration: none;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
 
-button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 200px;
-  font-size: 16px;
-  text-decoration: none;
-}
+    .popup button:hover {
+      background-color: #555;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 200px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
 <div class="banner">
   <div class="banner-content">
-    <button class="banner-button" onclick="refreshPage()">Refresh</button>
     <h1>Password Manager</h1>
   </div>
 </div>
 
 <!-- <img src="/opensource_project/resource/picture.jpg" alt="Banner Image"> -->
 
+<div id="saveModal" class="modal">
+  <div class="modal-content">
+    <p>Content for Save ID</p>
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="domain">Domain:</label>
+    <input type="domain" id="domain" name="domain">
+
+    <label for="Key">Key:</label>
+    <input type="Key" id="Key" name="Key">
+
+    <button onclick="saveCredentials()">Save</button>
+    <button onclick="closeModal('saveModal')">Close</button>
+  </div>
+</div>
+
+<div id="saveModal" class="modal">
+  <div class="modal-content">
+    <p>Save ID</p>
+
+    <div class="input-container">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id">
+    </div>
+
+    <div class="input-container">
+      <label for="password">Password:</label>
+      <input type="text" id="password" name="password">
+    </div>
+
+    <div class="input-container">
+      <label for="domain">Domain:</label>
+      <input type="text" id="domain" name="domain">
+    </div>
+
+    <div class="input-container">
+        <label for="Key">Key:</label>
+        <input type="text" id="Key" name="Key">
+    </div>
+
+    <div class="button-container">
+      <button onclick="saveCredentials()">Save</button>
+      <button onclick="closeModal('saveModal')">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for search ID -->
+<div id="searchModal" class="modal">
+  <div class="modal-content">
+    <p>Content for Search ID</p>
+    <button onclick="closeModal('searchModal')">Close</button>
+  </div>
+</div>
+
+<!-- Modal for delete ID -->
+<div id="deleteModal" class="modal">
+  <div class="modal-content">
+    <p>Content for Delete ID</p>
+    <button onclick="closeModal('deleteModal')">Close</button>
+  </div>
+</div>
+
 <div class="popup">
-  <button onclick="window.open('')">save ID</button>
-  <button onclick="window.open('')">search ID</button>
-  <button onclick="window.open('')">Delete ID</button>
+  <button onclick="openModal('saveModal')">save ID</button>
+  <button onclick="openModal('searchModal')">search ID</button>
+  <button onclick="openModal('deleteModal')">Delete ID</button>
 </div>
 
 <script>
-  function refreshPage() {
-    location.reload();
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
   }
 </script>
 
